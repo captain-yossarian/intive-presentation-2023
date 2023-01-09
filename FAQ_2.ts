@@ -3,7 +3,6 @@
  * other data structures.
  * Imagine you need to create an array which should always contain Color.white and Color.black enums
  */
-
 enum Color {
   red,
   green,

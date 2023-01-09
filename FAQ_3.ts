@@ -60,11 +60,11 @@ type Structure = {
   };
 };
 
-type Check<Obj> = {
+type Check<Obj> = Values<{
   [Prop in KeysUnion<Obj>]: IsUnion<Validate<Obj, Prop>> extends true
-    ? "many"
-    : "one";
-};
+    ? Prop
+    : never;
+}>;
 
 type Duplicates = Check<Structure>;
 

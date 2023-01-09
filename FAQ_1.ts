@@ -3,23 +3,16 @@
  * Assume we have a variable which should match some pattern. For instance we have
  * a string which should contain "x,y; x,y; x,y; ..."
  *
- * There is no a regular expression to express this infinity pattern, however we can accomplish it with unions:
  */
 
 type Coordinates = `${number},${number};`;
 
 type MAXIMUM_ALLOWED_BOUNDARY = 10;
 
-/**
- * Obtains last element in the tuple
- */
 type Last<T extends string[]> = T extends [...infer _, infer Last]
   ? Last
   : never;
 
-/**
- * Concats Coordinates to the last element in the tuple
- */
 type ConcatPrevious<T extends any[]> = Last<T> extends string
   ? `${Last<T>}${Coordinates}`
   : never;
