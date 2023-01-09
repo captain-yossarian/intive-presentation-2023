@@ -1,5 +1,3 @@
-import React from "react";
-
 // https://catchts.com/undocumented-features
 
 // #1 lowercase
@@ -8,4 +6,3 @@ import React from "react";
 let str: Lowercase<string>;
 str = "abc"; // okay
 str = "DEF"; // error in TS4.8+
-

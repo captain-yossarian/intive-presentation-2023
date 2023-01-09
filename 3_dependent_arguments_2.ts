@@ -3,13 +3,8 @@ const obj = {
   b: 42,
   c: "c",
 };
-type Values<T> = T[keyof T];
 
-// Second argument should be a property name which corresponds to string
-// @ts-ignore
-stringProperty(obj, "a"); // ok
-// @ts-ignore
-stringProperty(obj, "b"); // expected error
+type Values<T> = T[keyof T];
 
 type FilterPropertyBy<Obj, Type> = Values<{
   [Prop in keyof Obj]: Obj[Prop] extends Type ? Prop : never;
@@ -28,4 +23,4 @@ const string = <
   const result = obj[key].charAt; // ok
 };
 
-const result = string(obj, "c");
+const result = string(obj, "a");
