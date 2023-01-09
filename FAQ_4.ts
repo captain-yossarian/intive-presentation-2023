@@ -7,7 +7,7 @@ type Wrapper<List extends unknown[]> = {
 };
 
 function mapper<Obj, List extends Obj[]>(
-  ...contexts: [...Wrapper<[...List]>]
+  ...contexts: [...Wrapper<List>]
 ): void {
   contexts.forEach((context) => contextFunction(context));
 }
