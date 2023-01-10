@@ -1,5 +1,5 @@
 import React, { createContext, ProviderProps } from "react";
-
+// my answer on stackoverflow https://stackoverflow.com/questions/75044363/recursively-apply-generic-function-to-variadic-tuple-in-typescript/75056439#75056439
 function contextFunction<T>(context: React.Context<T>): void {}
 
 type Wrapper<List extends unknown[]> = {
