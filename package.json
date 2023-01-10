@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "react": "^18.2.0",
-    "typescript": "^4.9.4"
+    "typescript": "^5.0.0-dev.20221223"
   },
   "devDependencies": {
     "@types/react": "^18.0.26"
