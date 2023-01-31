@@ -1,3 +1,4 @@
+"type Hack<T> = T & {}" // <------ before I start presentation, think about this type, it has 3 use cases :)
 /**
  * TypeScript 5.0
  */
