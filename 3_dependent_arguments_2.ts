@@ -2,6 +2,7 @@ const obj = {
   a: "a",
   b: 42,
   c: "c",
+  d: 3,
 };
 
 type Values<T> = T[keyof T];
@@ -10,6 +11,7 @@ type FilterPropertyBy<Obj, Type> = Values<{
   [Prop in keyof Obj]: Obj[Prop] extends Type ? Prop : never;
 }>;
 
+// b | d
 type Test = FilterPropertyBy<typeof obj, number>;
 
 const string = <

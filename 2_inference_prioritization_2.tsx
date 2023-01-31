@@ -12,6 +12,8 @@ const Select = <Value extends string>(props: SelectProps<Value>) => null;
 const ok = <Select value="red" options={["red", "yellow"]} />;
 const error = <Select value="green" options={["red", "yellow"]} />;
 
+// ANother example here https://stackoverflow.com/questions/75233854/typescript-ensure-all-properties-use-the-same-tuple-type/75233976#75233976
+
 //Using Value & - means "lower priority inference"
 
 // #3 Non nullable, documented feature
